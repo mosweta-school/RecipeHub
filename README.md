@@ -1,16 +1,48 @@
-# React + Vite
+## 🍳 RecipeHub
+A sleek, responsive React application built with Vite that displays a curated list of tasty dishes. This project demonstrates parent-child component architecture and dynamic data rendering using props. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Features
+- Dynamic Recipe Cards: Displays ingredients and step-by-step instructions.
+- Parent-Child Architecture:
+- RecipeList (Parent) manages the data array.
+- RecipeCard (Child) handles the presentation of individual recipes.
+- Modern Styling: Uses React inline styles for a clean, centered layout.
+- Fast Performance: Powered by Vite for near-instant Hot Module Replacement (HMR).
+  
+## 🛠️ Project Structure
+recipe-app/
+├── 📄 index.html          # Entry HTML file
+├── 📁 src/                # Main source code
+    ├── 📄 main.jsx        # Mounts the React application
+    ├── 📄 App.jsx         # Grandparent component & Data source
+    └── 📁 Components/     # Reusable UI Components
+        └──📄 RecipeList.jsx # Parent: Maps through recipes
+            └── 📄 RecipeCard.jsx # Child: Displays individual recipe details
 
-Currently, two official plugins are available:
+## 💻 Tech Stack
+- React (Functional Components & Hooks)
+- Vite (Build Tool)
+- JavaScript (ES6+)
+- CSS3 (Inline styles & App.css)
+  
+## 🛠️ Installation & Setup
+1. Fork the repository
+2. Clone the repository
+```bash
+git clone https://github.com/your-username/RecipeHub.git
+```
+3. Install dependencies
+```bash
+npm install
+```
+4. Start the development server
+```bash
+npm run dev
+```
+Note: Open the link provided in the terminal (usually http://localhost:5173). Do not use Live Server (port 5500) as it does not support JSX.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📖 Component Logic
+The application follows a strict top-down data flow:
+- App.jsx passes the recipes array to RecipeList.
+- RecipeList iterates over the array using .map() and renders a RecipeCard for each item.
+- Each RecipeCard receives a recipe object as a prop and displays its contents.
