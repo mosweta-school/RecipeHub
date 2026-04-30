@@ -15,12 +15,15 @@ RecipeHub/
 ├── 📁 src/
     ├── 📁 Assets
     ├── 📄 main.jsx        
-    ├── 📄 App.jsx         # Grandparent component & Data source
+    ├── 📄 App.jsx         
     ├── 📄 index.css 
     ├── 📄 App.css
-    └── 📁 Components/     # Reusable UI Components
-        └──📄 RecipeList.jsx # Parent: Maps through recipes
-            └── 📄 RecipeCard.jsx # Child: Displays individual recipe details
+    └── 📁 Components/     
+        └──📄 RecipeList.jsx 
+            └── 📄 RecipeCard.jsx 
+
+📄 RecipeCard.jsx displays individual recipe details
+📄 RecipeList.jsx maps through recipes
 
 ## 💻 Tech Stack
 - React (Functional Components & Hooks)
