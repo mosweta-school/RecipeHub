@@ -10,11 +10,14 @@ A sleek, responsive React application built with Vite that displays a curated li
 - Fast Performance: Powered by Vite for near-instant Hot Module Replacement (HMR).
   
 ## 🛠️ Project Structure
-recipe-app/
-├── 📄 index.html          # Entry HTML file
-├── 📁 src/                # Main source code
-    ├── 📄 main.jsx        # Mounts the React application
+RecipeHub/
+├── 📄 index.html          
+├── 📁 src/
+    ├── 📁 Assets
+    ├── 📄 main.jsx        
     ├── 📄 App.jsx         # Grandparent component & Data source
+    ├── 📄 index.css 
+    ├── 📄 App.css
     └── 📁 Components/     # Reusable UI Components
         └──📄 RecipeList.jsx # Parent: Maps through recipes
             └── 📄 RecipeCard.jsx # Child: Displays individual recipe details
